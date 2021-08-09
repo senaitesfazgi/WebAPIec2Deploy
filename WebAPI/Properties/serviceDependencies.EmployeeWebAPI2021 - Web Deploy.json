@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "apis1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.ApiManagement/service/EmployeeWebAPI/apis/employeeapi",
+      "type": "apis.azure"
+    },
+    "secrets1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourceGroups/[parameters('resourceGroupName')]/providers/Microsoft.KeyVault/vaults/EmployeeWebAPIvault",
+      "type": "secrets.keyVault",
+      "connectionId": "SecretKeyUri",
+      "secretStore": "AzureAppSettings"
+    },
+    "mssql1": {
+      "resourceId": "/subscriptions/[parameters('subscriptionId')]/resourcegroups/[parameters('resourceGroupName')]/providers/Microsoft.Sql/servers/employeewebapidbserver/databases/WebAPI_db",
+      "type": "mssql.azure",
+      "connectionId": "EmployeeAppCon",
+      "secretStore": "AzureAppSettings"
+    }
+  }
+}
